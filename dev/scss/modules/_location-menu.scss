@@ -1,0 +1,117 @@
+/* ===  Location menu === */
+
+.location-menu{
+  position: absolute;
+  top: 33%;
+  left: 69%;
+  width: 960px;
+  &-item{
+    a{
+      display: block;
+      height: 3.55555555em;
+      width: 100%;
+      margin-left: 0;
+      font-family: "MyriadProBold";
+      font-size: em(18px);
+      text-align: left;
+      text-transform: uppercase;
+      color: white;
+
+      &:after{
+        content: '';
+        display: table;
+        clear: both;
+      }
+    }
+
+    img{
+      float: left;
+    }
+
+    span{
+    display: inline-block;
+    margin-top: 0.63888888em;
+    margin-left: 1.11111111em;
+    }
+
+    &.top{
+      margin-bottom: 3.55555555em;
+      background:transparent url('../images/over-header/location-menu-item-bg-green.png') left top no-repeat;
+      img{
+        width: 98px;
+        height: 98px;
+        margin-left: -49px;
+        margin-top: -.94444444em;
+        transition: all .5s;
+      }
+
+      a:hover img{
+        width: valGrow(98px);
+        height: valGrow(98px);
+        margin-left: valGrow(-49px);
+        margin-top: (valGrow(-.94444444em) - .17);
+      }
+    }
+
+    &.lower{
+      background:transparent url('../images/over-header/location-menu-item-bg-blue.png') left top no-repeat;
+      img{
+        width: 116px;
+        height: 116px;
+        margin-left: -70px;
+        margin-top: -1.44444444em;
+        transition: all .5s;
+      }
+
+      a:hover img{
+        width: valGrow(116px);
+        height: valGrow(116px);
+        margin-left: valGrow(-70px);
+        margin-top: (valGrow(-1.44444444em) - .17);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .location-menu{
+    left: 65%;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .location-menu{
+    top: 0;
+    left:45px;
+    width: 100%;
+    z-index: 11;
+
+    &-item{
+      margin-top: -1px;
+      a{
+        height: 25px;
+        text-align: center;
+      }
+
+      img{
+        display: none;
+      }
+
+      span{
+        margin: 0;
+        padding-right: 46px;
+        line-height: 24px;
+      }
+
+      &.top{
+        margin-bottom: 0;
+      }
+
+      br{
+        display: none;
+      }
+    }
+
+  }
+}

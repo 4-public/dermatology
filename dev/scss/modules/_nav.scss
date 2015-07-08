@@ -1,0 +1,139 @@
+/* === Navigation menu styles === */
+
+.nav{
+  text-align: center;
+  &-menu{
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+  }
+  &-item{
+    float: left;
+    padding: 0 .765em;
+    font-size: ($base-font-size + 2);
+    line-height: 68px;
+
+    @media screen and (min-width: 769px) and (max-width: 980px) {
+      font-size: $base-font-size;
+    }
+
+    @media screen and (min-width: 321px) and (max-width: 768px) {
+      font-size: ($base-font-size - 1);
+    }
+
+    &:hover{
+      background-color: rgba(12, 153, 199, .75);
+    }
+
+    @media screen and (min-width: 641px){
+      &:hover .sub-nav-menu{
+        top: 110.3%;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+
+    a{
+      color: white;
+    }
+  }
+}
+
+.sub-nav{
+  &-menu{
+    position: absolute;
+    display: block;
+    margin-left: -.92em;
+    visibility: hidden;
+    background-color: rgba(7, 152, 199, .75);
+
+    @media screen and (min-width: 641px){
+      top: 150%;
+      opacity: 0;
+      transition: top .5s ease, opacity .5s ease;
+    }
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: -7px;
+      height: 7px;
+      width: 100%;
+    }
+  }
+  &-item{
+    max-width: 250px;
+    padding: 0.5em 1em;
+    text-align: left;
+    line-height: 1;
+    border-bottom: 1px solid rgba(98, 173, 199, .5);
+
+
+    &:hover{
+      background-color: rgba(12, 153, 199, .75);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-item{
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .nav{
+    width: auto;
+    &-menu{
+      display: none;
+    }
+
+    &-item{
+      position: relative;
+      float: none;
+      line-height: 2;
+
+      &:hover .sub-nav-menu{
+        top: 0;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    & &-btn{
+      width: 46px;
+      height: 48px;
+      background: $theme-color url(../images/nav-btn.png) 50% no-repeat;
+      // &:hover + .nav-menu{
+      //   display: inline-block;
+      // }
+    }
+  }
+
+  .sub-nav{
+    &-menu{
+      top: 250%;
+      left: 115%;
+      opacity: 0;
+      transition: top .5s ease, opacity .5s ease;
+
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -7px;
+        height: 100%;
+        width: 7px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 979px) {
+  .price{
+    display: none;
+  }
+}

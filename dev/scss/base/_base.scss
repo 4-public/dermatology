@@ -1,0 +1,28 @@
+/* === Base styles === */
+
+body{
+  font-family: "MyriadProRegular", arial;
+  font-size: $base-font-size;
+  background-color: #fff;
+
+  a{
+    text-decoration: none;
+  }
+}
+
+.main{
+  overflow: hidden;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 980px) {
+  body{
+    font-size: ($base-font-size - 1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body{
+    font-size: ($base-font-size - 2);
+  }
+}

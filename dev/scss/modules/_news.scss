@@ -1,0 +1,136 @@
+/* === News === */
+
+.news{
+    padding-bottom: 2.5em;
+    overflow: hidden;
+  h2{
+    margin: em(20px, 30px) 0;
+    font-size: em(30px);
+    text-align: center;
+  }
+
+  .article{
+    float: left;
+    width: percentage(313px / 980px);
+    margin-right: percentage(21px / 980px);
+
+    &.no-margin{
+      margin-right: -1px;
+
+      .read-more{
+        margin-right: 1px;
+      }
+    }
+
+    img{
+      width: 100%;
+    }
+
+    h3{
+      display: inline-block;
+      min-height: em(48px, 22px);
+      margin: em(20px, 22px) 0;
+      font-size: em(22px);
+      line-height: em(24px, 22px);
+    }
+    p{
+      margin-bottom: em(20px, 14px);
+      font-size: em(14px);
+      line-height: em(21px, 14px);
+
+      &.date{
+        float: left;
+        font-size: em(13px);
+        line-height: em(17px, 13px);
+      }
+    }
+
+    &:after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  .read-more{
+    float: right;
+    width: 21px;
+    height: 21px;
+    background:transparent url('../images/news/btn-open.png') left top no-repeat;
+
+    &:hover{
+    background:transparent url('../images/news/btn-open-hover.png') left top no-repeat;
+    }
+  }
+
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  div:first-of-type{
+    h3{
+      line-height: em(48px, 22px);
+      vertical-align: middle;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .news{
+    &.wrapper{
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    h2{
+      font-size: em(21px, 14px);
+    }
+    .article{
+      h3{
+        font-size: em(16px, 14px);
+      }
+    }
+
+    div:first-of-type{
+      h3{
+        line-height: em(24px, 22px);
+        vertical-align: baseline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .news{
+    &.wrapper{
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    .article{
+      width: percentage(310px / 640px);
+      margin-right: percentage(21px / 980px);
+      &.no-margin{
+        display: none;
+      }
+    }
+    h3{
+      font-size: em(14px, 14px);
+      hyphens: auto;
+    }
+    div:nth-of-type(2){
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .news{
+    a{
+      display: none;
+    }
+  }
+}

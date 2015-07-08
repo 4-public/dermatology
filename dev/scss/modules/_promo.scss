@@ -1,0 +1,120 @@
+/* === Promo article === */
+
+.article-promo{
+  padding: 50px 0;
+
+  img{
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    margin-right: 25px;
+  }
+
+  p{
+    text-indent: 36px;
+    font-size: em(13px);
+    line-height: em(17px, 13px);
+  }
+
+  & &-head{
+    margin: 1em 0;
+    font-size: em(20px);
+    text-indent: 0;
+    line-height: 1em;
+    color: #2b2b2b;
+  }
+
+  & &-signature{
+    text-indent: 0;
+    margin: 1em 0;
+  }
+
+  &-quote{
+    float: right;
+    font-family: "AgoraSansProRegular";
+    font-size: 102px;
+    line-height: 20px;
+    color: #ecf2f4;
+  }
+
+  .wrapper{
+    &:before{
+      content: '“';
+      display: block;
+      font-family: "AgoraSansProRegular";
+      font-size: 102px;
+      line-height: 20px;
+      color: #ecf2f4;
+
+    }
+
+    &:after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .article-promo{
+    padding: 25px 0 0;
+
+    img{
+      margin-bottom: 25px;
+    }
+
+    p{
+      font-size: em(12px, 14px);
+    }
+
+    .wrapper{
+      position: relative;
+      padding-left: 35px;
+      padding-right: 35px;
+      &:before{
+        content: '“';
+        position: absolute;
+        top: 0;
+        left: 25px;
+        font-family: "AgoraSansProRegular";
+        font-size: 102px;
+        line-height: 20px;
+        color: #ecf2f4;
+
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .article-promo{
+    img{
+      float: none;
+      display: block;
+      margin: 0 auto;
+    }
+
+    p:nth-of-type(3), p:nth-of-type(4){
+      display: none;
+    }
+
+    .wrapper{
+      position: relative;
+      padding-left: 35px;
+      padding-right: 35px;
+      &:before{
+        content: '“';
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        font-family: "AgoraSansProRegular";
+        font-size: 102px;
+        line-height: 20px;
+        color: #ecf2f4;
+      }
+    }
+  }
+}

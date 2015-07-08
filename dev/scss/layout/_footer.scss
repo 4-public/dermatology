@@ -1,0 +1,248 @@
+/* === Footer === */
+
+.footer{
+  color: white;
+  background-color: $theme-color;
+  border-top: 4px solid #dae5e9;
+
+  .wrapper{
+    box-sizing: border-box;
+    padding: 27px 56px;
+
+    &>div{
+      float: left;
+    }
+
+    &:after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  a{
+    color: white;
+  }
+
+  .contact{
+    float: left;
+
+    h4{
+      font-size: em(16px, 15px);
+      line-height: em(20px);
+    }
+
+    p{
+      float: left;
+      box-sizing: border-box;
+      margin-top: 20px;
+      padding-left: 35px;
+      font-size: em(13px, 15px);
+    }
+
+    .address{
+      width: 55%;
+      background:transparent url('../images/footer/location-address.png') left top no-repeat;
+    }
+    .tel-number{
+      width: 45%;
+      line-height: 2em;
+      background:transparent url('../images/footer/location-number.png') left top no-repeat;
+    }
+    &-container{
+      width: 100%;
+      & div:first-child{
+        width: 55%;
+
+        .address{
+          width: 45%;
+        }
+        .tel-number{
+          width: 55%;
+        }
+      }
+      & div:last-child{
+        width: 45%;
+
+        .address{
+          width: 60%;
+        }
+        .tel-number{
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  .social{
+    float: left;
+    a{
+      margin-right: 14px;
+      img{
+        width: 37px;
+      }
+    }
+  }
+  .feedback-open{
+    float: left;
+    line-height: 37px;
+    a{
+      display: inline-block;
+      margin-left: 23px;
+      padding: 5px 15px 5px 47px;
+      font-family: "MyriadProBold";
+      font-size: em(14px, 15px);
+      line-height: em(20px, 14px);
+      background: #068ab5 url('../images/footer/btn-feedback.png') 15px 6px no-repeat;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+  }
+  .social-feedback-container, .copyright{
+    width: 55%;
+    margin-top: 20px;
+  }
+
+  .copyright{
+    width: 45%;
+    font-size: em(13px, 15px);
+    line-height: em(19px, 13px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer{
+    .wrapper{
+      padding-left: 35px;
+      padding-right: 35px;
+      .contact-container{
+        float: right;
+        width: percentage(2/3);
+        }
+      }
+
+    .contact{
+      box-sizing: border-box;
+      h4{
+        font-size: em(15px, 14px);
+      }
+      &:last-of-type{
+        padding-left: 50px;
+      }
+    }
+
+    #contact{
+      p{
+        width: 100%;
+      }
+    }
+
+    .social-feedback-container, .copyright{
+      width: percentage(1/3);
+    }
+
+    .social-feedback-container{
+      margin-top: 0;
+    }
+
+    .social{
+      a{
+        img{
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+
+    .feedback-open{
+      a{
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+
+    .copyright{
+      span{
+        float: left;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .footer{
+    .wrapper{
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 25px;
+      padding-right: 25px;
+      .contact-container{
+        float: right;
+        width: 100%;
+        margin-top: 73px;
+        & div:first-child{
+          width: 100%;
+
+          .address{
+            width: 45%;
+          }
+          .tel-number{
+            width: 55%;
+          }
+        }
+        & div:last-child{
+          width: 100%;
+          padding: 20px 0 0 0;
+
+          .address{
+            width: 60%;
+          }
+          .tel-number{
+            width: 40%;
+          }
+        }
+      }
+    }
+
+    .contact{
+      h4{
+        font-size: em(15px, 14px);
+      }
+    }
+
+    .social-feedback-container, .copyright{
+    }
+
+    .social-feedback-container{
+      position: absolute;
+      top: 27px;
+      left: 25px;
+      right: 25px;
+      width: auto;
+    }
+
+    .social{
+      width: 50%;
+      margin-left: -10px;
+      a{
+        margin-right: 0;
+      }
+    }
+
+    .feedback-open{
+      margin-right: -10px;
+      a{
+        margin-top: 5px;
+        padding-left: 32px;
+        padding-right: 10px;
+        background: #068ab5 url("../images/footer/btn-feedback.png") 10px 6px no-repeat;
+      }
+    }
+
+    .copyright{
+      font-size: em(11px, 14px);
+      width: 100%;
+    }
+  }
+}

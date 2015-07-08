@@ -1,0 +1,213 @@
+/* === Face pointers === */
+
+.face-pointers{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 588px;
+}
+
+.pointer{
+  cursor: pointer;
+  width: 19px;
+  height: 18px;
+  transition: all .5s;
+  border-radius: 50%;
+
+  &:hover{
+    width: 21px;
+    height: 20px;
+    margin-left: -1px;
+    margin-top: -1px;
+    box-shadow: 0 0 3px 0px white;
+  }
+}
+
+.description{
+  box-sizing: border-box;
+  height: em($base-font-size + 14px);
+  padding: 5px 10px;
+  color: white;
+  overflow: hidden;
+  opacity: 0;
+  background-color: $theme-color;
+  border: 2px solid #DAE5E9;
+  border-radius: 10px;
+  transform: translateX(-10px);
+  transition: all .5s;
+  cursor: default;
+  z-index: 5;
+}
+
+.forehead{
+  position: absolute;
+  left: percentage(450px / 980px);
+  top: percentage(110px / 588px);
+
+  &.description{
+    left: percentage(450px / 980px) - 8.3;
+    top: percentage(110px / 588px) - 1;
+    transform: translateX(-0px);
+  }
+
+  &:hover ~ &.description{
+    opacity: 1;
+    transform: translateX(-15px);
+  }
+}
+
+.above-eye{
+  position: absolute;
+  left: percentage(510px / 980px);
+  top: percentage(155px / 588px);
+
+  &.description{
+    left: percentage(510px / 980px) + 3;
+    top: percentage(155px / 588px) - 2;
+  }
+
+  &:hover ~ &.description{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.under-eye{
+  position: absolute;
+  left: percentage(490px / 980px);
+  top: percentage(210px / 588px);
+
+  &.description{
+    left: percentage(490px / 980px) + 4;
+    top: percentage(210px / 588px);
+  }
+
+  &:hover ~ &.description{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.cheek{
+  position: absolute;
+  left: percentage(515px / 980px);
+  top: percentage(265px / 588px);
+
+  &.description{
+    left: percentage(515px / 980px) + 4;
+    top: percentage(265px / 588px) - 2;
+  }
+
+  &:hover ~ &.description{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.chin{
+  position: absolute;
+  left: percentage(475px / 980px);
+  top: percentage(345px / 588px);
+
+  &.description{
+    left: percentage(475px / 980px) - 12;
+    top: percentage(345px / 588px) + 3.5;
+  }
+
+  &:hover ~ &.description{
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .forehead{
+    position: absolute;
+    left: percentage(450px / 980px);
+    top: percentage(35px / 357px);
+
+    &.description{
+      left: percentage(450px / 980px) - 10.2;
+      top: percentage(35px / 357px) - 1;
+      transform: translateX(-0px);
+    }
+
+    &:hover ~ &.description{
+      opacity: 1;
+      transform: translateX(-15px);
+    }
+  }
+
+  .above-eye{
+    position: absolute;
+    left: percentage(510px / 980px);
+    top: percentage(55px / 357px);
+
+    &.description{
+      left: percentage(510px / 980px) + 4;
+      top: percentage(55px / 357px) - 2;
+    }
+
+    &:hover ~ &.description{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .under-eye{
+    position: absolute;
+    left: percentage(490px / 980px);
+    top: percentage(73px / 357px);
+
+    &.description{
+      left: percentage(490px / 980px) + 4;
+      top: percentage(73px / 357px);
+    }
+
+    &:hover ~ &.description{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .cheek{
+    position: absolute;
+    left: percentage(515px / 980px);
+    top: percentage(90px / 357px);
+
+    &.description{
+      left: percentage(515px / 980px) + 4;
+      top: percentage(90px / 357px) - 2;
+    }
+
+    &:hover ~ &.description{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .chin{
+    position: absolute;
+    left: percentage(465px / 980px);
+    top: percentage(125px / 357px);
+
+    &.description{
+      left: percentage(465px / 980px) - 12;
+      top: percentage(125px / 357px) + 3.5;
+    }
+
+    &:hover ~ &.description{
+      opacity: 1;
+      transform: translateX(-20px);
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .face-pointers{
+    display: none;
+  }
+}

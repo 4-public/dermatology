@@ -1,0 +1,32 @@
+/* === Languages === */
+
+.languages{
+  position: absolute;
+  top: 83px;
+  right: 0px;
+}
+
+.lang-nav{
+  li{
+    float: left;
+    margin-right: 15px;
+
+    a{
+      font-family: "MyriadProSemiBold";
+      font-size: em(14px);
+      text-transform: uppercase;
+      color: #a8bec7;
+
+      &:hover{
+        color: $theme-color;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .languages{
+    display: none;
+  }
+}

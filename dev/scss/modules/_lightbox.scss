@@ -1,0 +1,49 @@
+/* === Lightbox === */
+
+.lightbox{
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+
+  &-image img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  &-prev{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 40%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  &-next{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  &-close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 10px;
+    background: transparent url('../images/x-close.png') top left no-repeat;
+    z-index: 15;
+  }
+}

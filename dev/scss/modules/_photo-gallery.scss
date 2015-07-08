@@ -1,0 +1,110 @@
+/* === Photo gallery === */
+
+.gallery{
+  position: relative;
+  padding-bottom: 3.875em;
+  background:transparent url('../images/gallery/gallery-bg.jpg') 50% top no-repeat;
+  border-top: 1px solid #e2eff3;
+
+  h2{
+    margin: .8em 0;
+    font-size: em(30px);
+    line-height: em(20px);
+    text-align: center;
+    color: white;
+  }
+
+  &-container{
+    width: 100%;
+    overflow: hidden;
+
+    &:after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  &-item{
+    float: left;
+    width: 327px;
+
+    &>div{
+      box-sizing: border-box;
+      position: relative;
+      display: block;
+      width: 100%;
+      background-color: white;
+      border: 5px solid white;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-shadow{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(60, 60, 60, .55) url('../images/gallery/search.png') 50% no-repeat;
+    }
+
+    &:hover &-shadow{
+      display: block;
+    }
+  }
+}
+
+.nav-box{
+  position: absolute;
+  bottom: 1.5em;
+  left: 50%;
+  margin-left: -31px;
+  a{
+    float: left;
+    width: 11px;
+    height: 11px;
+    margin-right: 8px;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &.selected{
+      background-color: white;
+    }
+    span{
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .gallery{
+    .wrapper{
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    h2{
+      font-size: em(21px, 14px);
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .gallery{
+    .wrapper{
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    h2{
+      font-size: em(16px, 14px);
+    }
+  }
+}

@@ -1,0 +1,88 @@
+/* === Services === */
+
+.services{
+  padding-top: em(50px);
+  background-color: #dae5e9;
+  border-top: 4px solid $theme-color;
+  text-align: center;
+
+  h3{
+    font-size: em(20px);
+    line-height: em(20px);
+  }
+
+  a{
+    color: #2b2b2b;
+  }
+
+  &-item{
+    float: left;
+    width: 25%;
+    padding-bottom: em(50px);
+
+    &-img-cover{
+      display: inline-block;
+      margin-bottom: em(25px);
+      padding: 2px 2px 0px 2px;
+      overflow: hidden;
+      border: 1px solid #767b7e;
+      border-radius: 50%;
+      behavior: url(src/PIE.htc);
+
+      &:hover{
+        border-color: $theme-color;
+        box-shadow: 0 7px 20px -8px #767b7e;
+        behavior: url(src/PIE.htc);
+      }
+    }
+  }
+
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services{
+    .wrapper{
+     padding-left: 25px;
+     padding-right: 25px;
+    }
+    h3{
+      font-size: em(14px, 14px);
+      line-height: em(20px);
+    }
+    &-item{
+      box-sizing: border-box;
+      padding-left: 1.5625%;
+      padding-right: 1.5625%;
+      a{
+        div{
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .services{
+    &-item{
+      width: 50%;
+      box-sizing: border-box;
+      padding-left: 1.5625%;
+      padding-right: 1.5625%;
+      a{
+        div{
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
